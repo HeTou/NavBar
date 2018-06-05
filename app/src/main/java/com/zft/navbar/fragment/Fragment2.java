@@ -32,7 +32,7 @@ public class Fragment2 extends Fragment {
             parent.removeView(mView);
         }
             TextView textView = mView.findViewById(R.id.text);
-            textView.setText(2+"");
+            textView.setText("咨询");
 
         return mView;
     }

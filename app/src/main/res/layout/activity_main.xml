@@ -8,6 +8,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
 
     <com.zft.navbarlib.FtTabLayout
         android:id="@+id/tab1"
@@ -21,9 +26,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:tab_img_height="30dp"
-
             app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
+            app:tab_name="首页"
             app:tab_text_color="@drawable/home_text"
             app:tab_text_size="12sp" />
 
@@ -32,180 +36,45 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:tab_img_height="30dp"
-
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
+            app:tab_anim_type="trans"
+            app:tab_img_src="@drawable/chat"
+            app:tab_name="咨询"
             app:tab_text_color="@drawable/home_text"
             app:tab_text_size="12sp" />
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:tab_img_height="30dp"
-
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="12sp" />
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:tab_img_height="30dp"
-
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="12sp" />
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:tab_img_height="30dp"
-
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="12sp" />
-    </com.zft.navbarlib.FtTabLayout>
-
-    <com.zft.navbarlib.FtTabLayout
-        android:id="@+id/tab2"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="2dp"
-        android:background="#ffffff"
-        android:orientation="horizontal">
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:tab_img_height="30dp"
-
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="12sp" />
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:tab_img_height="35dp"
-
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="13sp" />
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:tab_img_height="40dp"
-
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="14sp" />
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:tab_img_height="45dp"
-
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="15sp" />
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:tab_img_height="50dp"
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="16sp" />
-    </com.zft.navbarlib.FtTabLayout>
-
-    <com.zft.navbarlib.FtTabLayout
-        android:id="@+id/tab3"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="2dp"
-        android:background="#ffffff"
-        android:orientation="horizontal">
 
         <com.zft.navbarlib.FtTab
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:tab_anim_type="scale"
-            app:tab_img2text_space="6dp"
             app:tab_img_height="30dp"
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
+
+            app:tab_img_src="@drawable/community"
+            app:tab_name="社区"
             app:tab_text_color="@drawable/home_text"
             app:tab_text_size="12sp" />
 
         <com.zft.navbarlib.FtTab
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
             app:tab_anim_type="rotate"
-            app:tab_img2text_space="6dp"
-            app:tab_img_height="35dp"
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="13sp" />
-
-        <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:tab_img2text_space="6dp"
-            app:tab_img_height="40dp"
+            app:tab_img_height="30dp"
 
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
+            app:tab_img_src="@drawable/news"
+            app:tab_name="新闻"
             app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="14sp" />
+            app:tab_text_size="12sp" />
 
         <com.zft.navbarlib.FtTab
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
             app:tab_anim_type="alpha"
-            app:tab_img2text_space="6dp"
-            app:tab_img_height="45dp"
-
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
-            app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="15sp" />
-
-        <com.zft.navbarlib.FtTab
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:tab_anim_type="trans"
-            app:tab_img2text_space="6dp"
-            app:tab_img_height="50dp"
-            app:tab_img_src="@drawable/home"
-            app:tab_name="标签"
+            app:tab_img_height="30dp"
+            app:tab_img_src="@drawable/me"
+            app:tab_name="我"
             app:tab_text_color="@drawable/home_text"
-            app:tab_text_size="16sp" />
+            app:tab_text_size="12sp" />
     </com.zft.navbarlib.FtTabLayout>
-
-    <FrameLayout
-        android:id="@+id/fragment_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
 </LinearLayout>

@@ -16,8 +16,6 @@ import com.zft.navbarlib.FtTabLayout;
 public class MainActivity extends AppCompatActivity implements FtTabLayout.OnSelectedChangeListener, FtTabLayout.OnAgainClickListener {
 
     private FtTabLayout mTab1;
-    private FtTabLayout mTab2;
-    private FtTabLayout mTab3;
     private Fragment mCurFragment;
     private Fragment Fragment1;
     private Fragment fragment2;
@@ -35,23 +33,14 @@ public class MainActivity extends AppCompatActivity implements FtTabLayout.OnSel
 
     private void initView() {
         mTab1 = (FtTabLayout) findViewById(R.id.tab1);
-        mTab2 = (FtTabLayout) findViewById(R.id.tab2);
-        mTab3 = (FtTabLayout) findViewById(R.id.tab3);
         mTab1.setOnAgainClickListener(this);
         mTab1.setOnSelectedChangeListener(this);
 
-        mTab2.setOnAgainClickListener(this);
-        mTab2.setOnSelectedChangeListener(this);
 
-        mTab3.setOnAgainClickListener(this);
-        mTab3.setOnSelectedChangeListener(this);
     }
 
     @Override
     public void onSelectedChange(View view, int index) {
-        mTab1.setCurrentIndex(index);
-        mTab2.setCurrentIndex(index);
-        mTab3.setCurrentIndex(index);
         Fragment fragment = null;
         switch (index) {
             case 0:

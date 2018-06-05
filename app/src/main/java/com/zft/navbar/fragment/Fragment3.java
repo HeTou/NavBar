@@ -32,7 +32,7 @@ public class Fragment3 extends Fragment {
             parent.removeView(mView);
         }
         TextView textView = mView.findViewById(R.id.text);
-        textView.setText(3 + "");
+        textView.setText("社区");
 
         return mView;
     }
