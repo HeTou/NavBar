@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FtTab">
+        <attr name="tab_name" format="string" />        <!--标签名-->
+        <attr name="tab_img_src" format="reference" />  <!--标签图片资源id-->
+        <attr name="tab_img_width" format="dimension" /> <!--标签图片款度-->
+        <attr name="tab_img_height" format="dimension" />   <!--标签图片高度-->
+        <attr name="tab_text_color" format="color" />    <!--标签文本颜色-->
+        <attr name="tab_text_size" format="dimension" />
+        <attr name="tab_img2text_space" format="dimension" />  <!--图片与文本的间距-->
+        <attr name="tab_anim_type">
+            <enum name="no" value="0" />
+            <enum name="trans" value="1" />
+            <enum name="scale" value="2" />
+            <enum name="rotate" value="3" />
+            <enum name="alpha" value="4" />
+        </attr>
+    </declare-styleable>
+</resources>
