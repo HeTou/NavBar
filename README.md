@@ -5,7 +5,7 @@
     为了实现快速开发以及频繁的需求变更，为此而封装一个扩展性高的底部导航控件。
     
 ### 应用截图
-![zft](picture/img1.png )
+![zft](picture/img1.png )|![gif](picture/img2.gif)
 ### 简单用例
 ####1、xml的使用
 ```
