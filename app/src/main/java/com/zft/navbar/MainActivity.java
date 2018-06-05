@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements FtTabLayout.OnSel
         mTab1.setCurrentIndex(index);
         mTab2.setCurrentIndex(index);
         mTab3.setCurrentIndex(index);
-        Toast.makeText(this, "index:" + index, Toast.LENGTH_SHORT).show();
         Fragment fragment = null;
         switch (index) {
             case 0:
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements FtTabLayout.OnSel
 
     @Override
     public void onAgainClicked(View view, int index) {
-        Toast.makeText(this, "index:" + index, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "再次点击", Toast.LENGTH_SHORT).show();
     }
 
 
