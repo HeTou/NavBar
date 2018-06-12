@@ -2,9 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 27
-
-
-
+    resourcePrefix "tab_"    //这个随便填
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
@@ -14,6 +12,13 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+
 
     buildTypes {
         release {
@@ -32,3 +37,29 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'navbar'      //发布到JCenter上的项目名字
+
+    publishedGroupId = 'com.fen.origin' //函数库的Maven Group ID
+    libraryName = 'navbarlib'  //函数库名字  //
+    artifact = 'navbarlib'     //构件的名字  //注意这里要跟module名字一致
+
+    libraryDescription = "this is a navlib"    //函数库描述
+
+    siteUrl = 'https://github.com/HeTou/NavBar' //定义函数库的主页
+    gitUrl = 'https://github.com/HeTou/NavBar.git'  //定义函数库的Github仓库地址
+
+    libraryVersion = '1.0.0'    //函数库的版本号
+
+    developerId = 'fen'
+    developerName = 'fen'
+    developerEmail = 'fentao.zhong@gmail.com'
+
+    licenseName = 'The Apache Software License ,Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: "install.gradle"
+apply from: "bintray.gradle"

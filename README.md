@@ -7,7 +7,14 @@
 ### 应用截图
 ![gif](picture/img2.gif)
 ### 简单用例
-####1、xml的使用
+####1、在 build.gradle 中添加依赖
+```
+dependencies {
+    ...
+    implementation 'com.fen.origin:navbarlib:1.0.0'
+}
+```
+####2、xml的使用
 ```
  <com.zft.navbarlib.FtTabLayout
         android:id="@+id/tab1"
@@ -38,7 +45,7 @@
             app:tab_text_size="12sp" />
 </com.zft.navbarlib.FtTabLayout>
 ```
-####2、Java代码中的使用
+####3、Java代码中的使用
 ```
           FtTabLayout  mTab1 = (FtTabLayout) findViewById(R.id.tab1);
           mTab1.setOnSelectedChangeListener(new FtTabLayout.OnSelectedChangeListener() {

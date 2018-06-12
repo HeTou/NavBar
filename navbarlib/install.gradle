@@ -1,0 +1,45 @@
+apply plugin: 'com.github.dcendents.android-maven'
+//生成JavaDoc 和 Source Jar 需要
+group = publishedGroupId
+
+install {
+    repositories.mavenInstaller {
+//        生成pom.xml文件
+        pom {
+            project {
+                packaging "aar"   //指定打包的格式，如果是jar包，则取值为'jar '
+                name libraryName
+                url siteUrl
+
+                groupId publishedGroupId
+                artifactId artifact
+                description libraryDescription
+
+//              设置授权许可
+                licenses {
+                    license {
+                        name licenseName
+                        url licenseUrl
+//                        distribution 'repo'
+                    }
+                }
+
+//              开发者信息
+                developers {
+                    developer {
+                        id developerId
+                        name developerName
+                        email developerEmail
+                    }
+                }
+
+//              设置软件配置管理
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}

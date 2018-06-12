@@ -1,0 +1,56 @@
+apply plugin: 'com.jfrog.bintray'
+
+//发布函数库构件时指定的版本号
+version = libraryVersion
+
+//生成Source Jar的任务
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+//生成JavaDoc的任务
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    options.encoding = 'UTF-8'
+}
+
+//生成JavaDoc.jar的任务
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+//    options.encoding = 'UTF-8'
+}
+
+
+//指定归档的构件
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+//上传到Bintray
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = bintrayRepo
+        name = bintrayName    //发布到JCenter上的项目名字
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = allLicenses
+        publish = true
+        publicDownloadNumbers = true
+//        version {
+//            desc = libraryDescription
+//            gpg {
+//                sign = false  //是否使用GPG对文件进行签名，默认是false
+//                passphrase = properties.getProperty("bintray.gpg.password")  //GPG签名密钥
+//            }
+//        }
+    }
+}
